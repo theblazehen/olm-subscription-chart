@@ -1,0 +1,4 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata: {{ tpl (toYaml .Values.subscription.metadata) . | nindent 2 }}
+spec: {{ tpl (toYaml .Values.subscription.spec) . | nindent 2 }}

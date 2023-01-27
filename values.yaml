@@ -1,0 +1,10 @@
+
+subscription:
+  metadata:
+    name: "{{ .Release.Name }}"
+    namespace: "operators"
+  spec:
+    channel: "latest"
+    name: "{{ .Release.Name }}"
+    source: "operatorhubio-catalog"
+    sourceNamespace: "olm"
